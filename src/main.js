@@ -1,5 +1,14 @@
-
-"RUDRA ABHISHEK", "BAIBHAV KUMAR", "AKSHATA BIRADAR", "PULAK SAHA", "MILIND THAKARE",
+const studentNames = [
+  "Abhay Kale", "Adinath Patil", "Ankit Bhalke", "Arman Patel", "Ashish Sonaniya",
+  "Dayanand Jat", "Devansh Mittal", "Dhireena Banu", "Ganesh Choudhary", "Jay Mehta",
+  "Kaif Khan", "Kaif Shaikh", "Khushi Agarwal", "Khushi Shah", "Mohhamed Rehan",
+  "Moin Kadival", "Parthiv", "Piyush Chouhan", "Pranay Sonaniya",
+  "Priya", "Priyanshu Tailor", "Radheshyam Bhati", "Roshan Bhendekar", "Rushikesh",
+  "Shayaz", "Sripathi Lakshmi Narasimha Dhruv Teja ", "Sumit Tiwari", "Yashraj", "Zahid Shaikh",
+  "GODBOLE VISHVAJEET SURYAKANT", "KUMKUM JANGIR", "ADITYA DOLHARE", "UTKARSH KUMAR", "ANOOP",
+  "ABHISHEK YADAV", "SHIVAM KUMAR JHA", "RUSHIKESH SHINDE", "SATYAM SATYAM YADUVANSHI", "AVISHKAR RAVIKANT CHAVAN",
+  "SHRADDHA NITIN LIMBEKAR", "BHARAT KUMAR", "RUGVED KADAM", "ABHINAV SINGH", "SOHAM SHINDE",
+  "RUDRA ABHISHEK", "BAIBHAV KUMAR", "AKSHATA BIRADAR", "PULAK SAHA", "MILIND THAKARE",
   "SAI SHENDGE", "HARSHVARDHAN SINGH CHAUHAN", "ASHWINLAL", "ADITYA VAWHAL", "ABHILASH",
   "ASHISH SHARMA", "SURAJ MADHESHIYA", "SANKALP TIWARI", "AYUSH KARANJIYA", "DHRUVARAJ NIKAM",
   "KRISHNA GUPTA", "VIVEK INGLE", "VIVEK MISHRA", "GYANRANJAN KUMAR", "SAURYAMAN BISEN",
