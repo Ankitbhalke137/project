@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="public/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School of Technology | Student Directory</title>
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo-container">
+        <img src="logo_premium.png" alt="School of Technology" class="logo-img">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Academic</a></li>
+          <li><a href="#">Campus Life</a></li>
+          <li><a href="#">Skills</a></li>
+          <li><a href="#">Mock Exams</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" title="Toggle Mode">🌙</button>
+        <div id="auth-section">
+          <button class="btn-login" id="login-trigger">Student Login</button>
+          <div id="user-menu" class="hidden">
+            <div id="user-initials"></div>
+            <div class="dropdown-menu">
+              <button id="edit-profile-trigger">Edit Profile</button>
+              <button id="logout-btn">Logout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>
+          <span class="hero-icon">🎓</span>
+          School of Technology
+        </h1>
+        <p>Meet our talented students from the School of Technology across different campuses and batches.</p>
+      </div>
+    </section>
+
+    <section class="filters-section">
+      <div class="container" id="filters">
+        <!-- Filters will be injected here by JS -->
+      </div>
+    </section>
+
+    <section class="results-info">
+      <div class="container" id="results-text">
+        Loading students...
+      </div>
+    </section>
+
+    <section class="student-list">
+      <div class="container">
+        <div class="student-grid" id="student-grid">
+          <!-- Student cards will be injected here by JS -->
+        </div>
+      </div>
+    </section>
+
+    <section class="pagination-section">
+      <div class="container">
+        <div class="pagination" id="pagination">
+          <!-- Pagination will be injected here by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col footer-about">
+          <h3>About PWIOI</h3>
+          <p>Empowering innovation and leadership through excellence in education, research, and community engagement.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Holidays</a></li>
+            <li><a href="#">Events Library</a></li>
+            <li><a href="#">Stamp Store</a></li>
+            <li><a href="#">Attendance</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Policies</h3>
+          <ul>
+            <li><a href="#">Code of Conduct</a></li>
+            <li><a href="#">Attendance Policy</a></li>
+            <li><a href="#">Grading Policy</a></li>
+            <li><a href="#">Examination Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Other Policies</h3>
+          <ul>
+            <li><a href="#">Library Policy</a></li>
+            <li><a href="#">IT Rules</a></li>
+            <li><a href="#">Sexual Harassment Policy</a></li>
+            <li><a href="#">Anti-Ragging Policy</a></li>
+            <li><a href="#">Social Media Policy</a></li>
+            <li><a href="#">Career Services Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h3>Contact</h3>
+          <p>PWIOI Campus, Bengaluru</p>
+          <p>12th Floor, Brigade Signature Tower, Old Madras Rd, Sannatammanahalli, Bengaluru, Karnataka 560049</p>
+          <p>📧 studentsuccess@pwioi.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 PW Institute of Innovation. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Student Profile Modal -->
+  <div id="student-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div id="modal-body" class="modal-body">
+        <!-- Content will be injected here by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="login-modal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 400px;">
+      <button class="modal-close" id="login-close">&times;</button>
+      <div class="modal-body">
+        <div class="login-header">
+          <h2>Student Login</h2>
+          <p>Log in to edit your profile</p>
+        </div>
+        <form id="login-form" class="edit-form">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="login-name" required placeholder="Enter your full name">
+          </div>
+          <div class="form-group">
+            <label>Roll Number / Password</label>
+            <input type="password" id="login-pass" required placeholder="••••••••">
+          </div>
+          <button type="submit" class="btn-primary" style="margin-top: 1rem;">Log In</button>
+        </form>
+        <div class="login-footer">
+          <p>Testing Tip: Use any name from the directory to log in (e.g., "Abhay Kale").</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Profile Modal -->
+  <div id="edit-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" id="edit-close">&times;</button>
+      <div class="modal-body">
+        <div class="login-header">
+          <h2>Edit Profile</h2>
+          <p>Update your details as shown on the directory</p>
+        </div>
+        <form id="edit-profile-form" class="edit-form">
+          <div class="form-group">
+            <label>Profile Photo</label>
+            <div class="photo-upload-section">
+              <img id="photo-preview" class="photo-preview" src="" alt="Preview" style="display: none;">
+              <input type="file" id="edit-avatar" accept="image/*">
+              <small class="form-hint">Upload a profile photo (JPG, PNG, or GIF)</small>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Location (City, State)</label>
+            <input type="text" id="edit-location" placeholder="e.g., Pune, Maharashtra">
+          </div>
+          <div class="form-group">
+            <label>About Me</label>
+            <textarea id="edit-about" placeholder="Tell us about yourself..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Portfolio Link</label>
+            <input type="url" id="edit-portfolio" placeholder="https://yourportfolio.com">
+          </div>
+          <div class="form-group">
+            <label>Achievements (Comma separated)</label>
+            <input type="text" id="edit-achievements" placeholder="e.g., Hackathon Winner, Top 1% Grade">
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn-secondary" id="edit-cancel">Cancel</button>
+            <button type="submit" class="btn-primary">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="src/main.js"></script>
+</body>
+
+</html>
