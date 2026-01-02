@@ -64,7 +64,7 @@ function generateFallbackStudents() {
 }
 
 // API Configuration
-const API_BASE_URL = '/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
 let USE_BACKEND = true; // Will be set to false if backend is unavailable
 
 // App State
